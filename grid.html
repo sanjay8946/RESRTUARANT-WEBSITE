@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-rows:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.p1{padding:1rem;
+    background-color: blue;
+    color:white;
+
+}
+
+.outerbox{
+display:grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(3,1fr);
+grid-auto-flow: column;
+gap:20px;
+
+
+
+
+}
+.abox{
+background-color: green;
+color:white;
+font-size: 4em;
+display:grid;
+justify-content: center;
+align-items: center;
+}
+.babox
+{
+grid-column:span 1;
+
+
+}
+.layout{
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr) ;
+    grid-template-rows:10vh 80vh 10vh ;
+    grid-template-areas: 
+    "h h h h h"
+    "sb1 m m m sb2"
+     "f f f f f";
+
+
+}
+
+.header
+{
+    grid-area: h;
+}
+.sidebar1{
+    grid-area: sb1;
+}
+.sidebar2{
+    
+    grid-area: sb2;
+
+}
+.main{
+    grid-area: m;
+}
+.footer{
+    grid-area: f;
+}
+   .layout div{
+       display:grid;
+       justify-content: center;
+       align-items: center;
+       border:1px solid black;
+       background-color:pink ;
+       font-size:2rem ;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.cir{
+width:100px;
+height:100px;
+border-radius: 50%;
+background-color: blue;
+position:relative;
+animation-name:circle;
+animation-duration: 3s;
+animation-fill-mode:forwards;
+animation-iteration-count: infinite;
+}
+@keyframes circle{
+
+0%{
+    width:100px;
+    height:100px;
+}
+50%{
+background-color: red;
+width:20px;
+height:30px;
+left:30px;
+top:100px;
+}
+100%{
+background-color: yellow;
+width:500px;
+height:500px;
+left:80px;
+bottom:100px;
+}
+
+}
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div>
+        <p class="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi minima aspernatur porro dignissimos neque delectus omnis dicta? Laboriosam in sint magnam provident deserunt porro libero voluptates vitae consequuntur voluptatibus dolores blanditiis iusto possimus fugit fugiat ut, asperiores quasi excepturi quidem iure? Mollitia repudiandae possimus voluptate velit eum vitae doloribus laboriosam, soluta sequi molestias quibusdam ipsam quo fuga expedita quasi voluptatem qui necessitatibus nemo reprehenderit, sed praesentium quia. Molestias autem aspernatur aliquam, dignissimos asperiores ullam fuga eum quidem doloremque aliquid doloribus magnam consectetur culpa quod ipsum possimus ipsam cum minus voluptas natus nihil. Placeat mollitia atque dolores ut, assumenda architecto quas.</p>
+       </div>
+       <div>
+        <p class="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi minima aspernatur porro dignissimos neque delectus omnis dicta? Laboriosam in sint magnam provident deserunt porro libero voluptates vitae consequuntur voluptatibus dolores blanditiis iusto possimus fugit fugiat ut, asperiores quasi excepturi quidem iure? Mollitia repudiandae possimus voluptate velit eum vitae doloribus laboriosam, soluta sequi molestias quibusdam ipsam quo fuga expedita quasi voluptatem qui necessitatibus nemo reprehenderit, sed praesentium quia. Molestias autem aspernatur aliquam, dignissimos asperiores ullam fuga eum quidem doloremque aliquid doloribus magnam consectetur culpa quod ipsum possimus ipsam cum minus voluptas natus nihil. Placeat mollitia atque dolores ut, assumenda architecto quas.</p>
+       </div>
+       <div>
+        <p class="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi minima aspernatur porro dignissimos neque delectus omnis dicta? Laboriosam in sint magnam provident deserunt porro libero voluptates vitae consequuntur voluptatibus dolores blanditiis iusto possimus fugit fugiat ut, asperiores quasi excepturi quidem iure? Mollitia repudiandae possimus voluptate velit eum vitae doloribus laboriosam, soluta sequi molestias quibusdam ipsam quo fuga expedita quasi voluptatem qui necessitatibus nemo reprehenderit, sed praesentium quia. Molestias autem aspernatur aliquam, dignissimos asperiores ullam fuga eum quidem doloremque aliquid doloribus magnam consectetur culpa quod ipsum possimus ipsam cum minus voluptas natus nihil. Placeat mollitia atque dolores ut, assumenda architecto quas.</p>
+       </div>
+       <div>
+        <p class="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi minima aspernatur porro dignissimos neque delectus omnis dicta? Laboriosam in sint magnam provident deserunt porro libero voluptates vitae consequuntur voluptatibus dolores blanditiis iusto possimus fugit fugiat ut, asperiores quasi excepturi quidem iure? Mollitia repudiandae possimus voluptate velit eum vitae doloribus laboriosam, soluta sequi molestias quibusdam ipsam quo fuga expedita quasi voluptatem qui necessitatibus nemo reprehenderit, sed praesentium quia. Molestias autem aspernatur aliquam, dignissimos asperiores ullam fuga eum quidem doloremque aliquid doloribus magnam consectetur culpa quod ipsum possimus ipsam cum minus voluptas natus nihil. Placeat mollitia atque dolores ut, assumenda architecto quas.</p>
+       </div>
+       <div>
+        <p class="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi minima aspernatur porro dignissimos neque delectus omnis dicta? Laboriosam in sint magnam provident deserunt porro libero voluptates vitae consequuntur voluptatibus dolores blanditiis iusto possimus fugit fugiat ut, asperiores quasi excepturi quidem iure? Mollitia repudiandae possimus voluptate velit eum vitae doloribus laboriosam, soluta sequi molestias quibusdam ipsam quo fuga expedita quasi voluptatem qui necessitatibus nemo reprehenderit, sed praesentium quia. Molestias autem aspernatur aliquam, dignissimos asperiores ullam fuga eum quidem doloremque aliquid doloribus magnam consectetur culpa quod ipsum possimus ipsam cum minus voluptas natus nihil. Placeat mollitia atque dolores ut, assumenda architecto quas.</p>
+       </div>
+       <div>
+        <p class="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi minima aspernatur porro dignissimos neque delectus omnis dicta? Laboriosam in sint magnam provident deserunt porro libero voluptates vitae consequuntur voluptatibus dolores blanditiis iusto possimus fugit fugiat ut, asperiores quasi excepturi quidem iure? Mollitia repudiandae possimus voluptate velit eum vitae doloribus laboriosam, soluta sequi molestias quibusdam ipsam quo fuga expedita quasi voluptatem qui necessitatibus nemo reprehenderit, sed praesentium quia. Molestias autem aspernatur aliquam, dignissimos asperiores ullam fuga eum quidem doloremque aliquid doloribus magnam consectetur culpa quod ipsum possimus ipsam cum minus voluptas natus nihil. Placeat mollitia atque dolores ut, assumenda architecto quas.</p>
+       </div>
+       <div>
+        <p class="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi minima aspernatur porro dignissimos neque delectus omnis dicta? Laboriosam in sint magnam provident deserunt porro libero voluptates vitae consequuntur voluptatibus dolores blanditiis iusto possimus fugit fugiat ut, asperiores quasi excepturi quidem iure? Mollitia repudiandae possimus voluptate velit eum vitae doloribus laboriosam, soluta sequi molestias quibusdam ipsam quo fuga expedita quasi voluptatem qui necessitatibus nemo reprehenderit, sed praesentium quia. Molestias autem aspernatur aliquam, dignissimos asperiores ullam fuga eum quidem doloremque aliquid doloribus magnam consectetur culpa quod ipsum possimus ipsam cum minus voluptas natus nihil. Placeat mollitia atque dolores ut, assumenda architecto quas.</p>
+       </div>
+       <div>
+        <p class="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi minima aspernatur porro dignissimos neque delectus omnis dicta? Laboriosam in sint magnam provident deserunt porro libero voluptates vitae consequuntur voluptatibus dolores blanditiis iusto possimus fugit fugiat ut, asperiores quasi excepturi quidem iure? Mollitia repudiandae possimus voluptate velit eum vitae doloribus laboriosam, soluta sequi molestias quibusdam ipsam quo fuga expedita quasi voluptatem qui necessitatibus nemo reprehenderit, sed praesentium quia. Molestias autem aspernatur aliquam, dignissimos asperiores ullam fuga eum quidem doloremque aliquid doloribus magnam consectetur culpa quod ipsum possimus ipsam cum minus voluptas natus nihil. Placeat mollitia atque dolores ut, assumenda architecto quas.</p>
+       </div>
+       <div>
+        <p class="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi minima aspernatur porro dignissimos neque delectus omnis dicta? Laboriosam in sint magnam provident deserunt porro libero voluptates vitae consequuntur voluptatibus dolores blanditiis iusto possimus fugit fugiat ut, asperiores quasi excepturi quidem iure? Mollitia repudiandae possimus voluptate velit eum vitae doloribus laboriosam, soluta sequi molestias quibusdam ipsam quo fuga expedita quasi voluptatem qui necessitatibus nemo reprehenderit, sed praesentium quia. Molestias autem aspernatur aliquam, dignissimos asperiores ullam fuga eum quidem doloremque aliquid doloribus magnam consectetur culpa quod ipsum possimus ipsam cum minus voluptas natus nihil. Placeat mollitia atque dolores ut, assumenda architecto quas.</p>
+       </div>
+       <div>
+        <p class="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi minima aspernatur porro dignissimos neque delectus omnis dicta? Laboriosam in sint magnam provident deserunt porro libero voluptates vitae consequuntur voluptatibus dolores blanditiis iusto possimus fugit fugiat ut, asperiores quasi excepturi quidem iure? Mollitia repudiandae possimus voluptate velit eum vitae doloribus laboriosam, soluta sequi molestias quibusdam ipsam quo fuga expedita quasi voluptatem qui necessitatibus nemo reprehenderit, sed praesentium quia. Molestias autem aspernatur aliquam, dignissimos asperiores ullam fuga eum quidem doloremque aliquid doloribus magnam consectetur culpa quod ipsum possimus ipsam cum minus voluptas natus nihil. Placeat mollitia atque dolores ut, assumenda architecto quas.</p>
+       </div>
+    </div>
+
+
+    <div class="outerbox">
+        <div class="babox">1</div>
+        <div class="abox">2</div>
+        <div class="abox">3</div>
+        <div class="abox">4</div>
+        
+        <div class="abox">5</div>
+        <div class="abox">6</div>
+        <div class="abox">7</div>
+        <div class="abox">8</div>
+       </div>
+
+
+       </div>      <div class="layout">
+     <div class="header">header</div>
+     <div class="sidebar1">sidebae 1</div>
+     <div class="main">main</div>
+      <div class="sidebar 2">sidebar 2</div>
+      <div class="footer">footer</div>
+
+
+
+    </div>
+<div class="cir"></div>
+</body>
+</html>
