@@ -1,53 +1,102 @@
- body{
-background-image:url('../image/pexels-christian-heitz-842711.jpg');
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-background-repeat:  no-repeat;
-background-size: cover;
-}
-.reg{
-  width:500px;
-  margin:250px auto;
-  background-color: rgba(0,0,0,.5);
-  color:white;
-  padding:10px 20px 30px;
-  border-radius:10px;
-}
+h1,h2{
+    color:blue;
+    font-family:monospace; 
+  }
+  p,h4{
+      color:brown;
+      font-family:sans-serif;
+      font-size:20px;
+  }
+  h2{font-size:50px;
+    }
+  h3{
+  color:red;
+  font-family:sans-serif;
+  font-size:30px;
+  }
+  a:link{
+  color:green;
+  }
+  a:hover{
+  color:pink;
+  }
+  a:active{
+  color:violet;
+  }
+  a:visited{
+    color:blue;
+    }
+    body{
 
-.reg h3{
-color:red;
-text-align:center;
-}
-label[class^=t]{
-display:block;
-}
-.input input{
-width:100%;
-font-size:1.2em;
-border:1px solid #006D77;
-padding:5px 10px;
-box-sizing:border-box;
-margin:5px 0px 15px;
-border-radius:8px;
-}
-input:focus{
-background-color:#83C5BE;
-}
-.btn{
-  text-align:center;
-}
-button{
-background-color: #83C5BE;
-font-size:30px;
-color:white;
-border-radius:8px;
-margin-top:20px;
-padding:15px 25px;
-border: 1px solid #006D77;
-box-shadow:2px;
-}
-.radio input{
-accent-color:#83C5BE;
-transform:scale(1.5);
+        background-color:yellow;
+    }
+    button{
+        background-color: blue;
+        font-size:30px;
+        color:white;
+        border-radius:20px;
+        margin:30px 30px;
+        padding:15px 25px;
+        border: 2px solid #006D77;
+        box-shadow:2px;
+        }
+        button[class^='b']{background-color: red;
+        font-size:30px;
+        color:white;
+        border-radius:20px;
+        margin:30px 30px;
+        padding:15px 25px;
+        border: 2px solid #006D77;
+        box-shadow:2px;}
+        
+        
+        
+        
+        .container{
+           display:flex;
+  
+           
+        }
 
-}
+        .img1{
+          flex:1;
+           order:2;
+        padding:20px;}
+       .p1{
+        flex:1;
+        order:1;
+        position:relative;
+        left:20px;
+        
+        
+       }
+       .container2{
+        display:flex;
 
+        
+     }
+
+     .img2{
+       flex:1;
+       
+        order:2;
+        position:relative;
+        left:20px;
+     }
+    .p2{
+     flex:1;
+     order:1;
+     position:relative;
+     left:20px;
+    }
+       
+.navbar{
+  display:flex;
+  justify-content:space-around;
+  
+  }
+
+
+
+
+        
