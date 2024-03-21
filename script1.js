@@ -1,6 +1,7 @@
-
 const email = document.querySelector('#email');
-
+const username = document.querySelector('#username');
+const password = document.querySelector('#password');
+const cpassword = document.querySelector('#cpassword');
 form.addEventListener('submit',(e)=>{
   
     if(!validateInputs()){
@@ -10,9 +11,41 @@ form.addEventListener('submit',(e)=>{
 
 function validateInputs(){
     
-    const emailVal = email.value.trim();
-    
+    const usernameVal = username.value.trim();
+    const emailVal = email.value.trim(); 
+    const passwordVal = password.value.trim();
+    const cpasswordVal = cpassword.value.trim();
     let success = true
+
+    if(usernameVal===''){
+        setError(username,'Username is required')
+    }
+    else{
+        setSuccess(username)
+    }
+    if(passwordVal===''){
+
+        setError(password,'Password is required')
+    }
+    else if(passwordVal.length<8){
+               setError(password,'Password must be atleast 8 characters long')
+    }
+
+    else{
+
+        setSuccess(password);
+    }
+    if(cpasswordVal===''){
+
+        setError(cpassword,'Password is required')
+    }
+    else if(cpassword!==password){
+        setError(cpassword,'password does not match')
+    }
+    else{
+setSuccess(cpassword);
+    }
+
 
     
 
@@ -27,6 +60,8 @@ function validateInputs(){
     else{
         setSuccess(email)
     }
+
+
 }
 
 function setError(element,message){
@@ -54,3 +89,4 @@ const validateEmail = (email) => {
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
   };
+ 
