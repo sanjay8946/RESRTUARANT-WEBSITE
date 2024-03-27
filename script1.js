@@ -39,7 +39,7 @@ function validateInputs(){
 
         setError(cpassword,'Password is required')
     }
-    else if(cpasswordVal!==passwordVal){
+    else if(cpasswordVal!==password){
         setError(cpassword,'password does not match')
     }
     else{
