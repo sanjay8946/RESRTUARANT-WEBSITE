@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+</head>
+<body>
+    <script>
+        
+        const products = [];
+
+        // Function to add a new product to the inventory
+        function addProduct() {
+            const name = prompt("Enter product name:");
+            const priceStr = prompt("Enter product price:");
+            const quantityStr = prompt("Enter product quantity:");
+
+            // Convert price and quantity strings to numbers
+            const price = parseFloat(priceStr);
+            const quantity = parseInt(quantityStr);
+
+            // Validate input
+            if (!name || isNaN(price) || isNaN(quantity) || price <= 0 || quantity <= 0) {
+                alert("Invalid input. Please provide valid product details.");
+                return;
+            }
+
+            // Create a product object and add it to the products array
+            const product = {
+                name: name,
+                price: price,
+                quantity: quantity
+            };
+
+            products.push(product);
+
+            // Display confirmation message
+            document.write(`Product '${name}' added to inventory.<br>`);
+        }
+
+        // Function to display all products in the inventory
+        function displayProducts() {
+            // Display heading
+            document.write("<h2>Inventory:</h2>");
+
+            if (products.length === 0) {
+                document.write("Inventory is empty.");
+            } else {
+                // Display each product
+                products.forEach(product => {
+                    document.write(`Name: ${product.name}, Price: $${product.price}, Quantity: ${product.quantity}<br>`);
+                });
+            }
+        }
+
+        // Function to continuously add products until stopped by the user
+        function addProductsUntilStopped() {
+            let continueAdding = true;
+
+            while (continueAdding) {
+                addProduct();
+
+                const response = prompt("Do you want to add another product? (yes/no)");
+                if (response.toLowerCase() !== 'yes') {
+                    continueAdding = false;
+                }
+            }
+
+            
+            displayProducts();
+        }
+
+        
+        addProductsUntilStopped();
+    </script>
+</body>
+</html>
+
+
