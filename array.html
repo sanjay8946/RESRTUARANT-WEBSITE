@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+    function largest(array)
+    {   let max = array[0];
+        for(let i=0;i<array.length;i++)
+           {
+             if(array[i]>max)
+              {max=array[i];}
+
+           }
+           document.write(`the largest element in array is ${max}`);
+        return max;
+    }
+      function getArray(){
+              let input;
+              let array=[];
+              while(true){
+              input = window.prompt('Enter a number or "exit" to finish');
+              if(input.toLowerCase()==='exit')
+              break;
+              const number = parseFloat(input);
+                 if(!isNaN(number)){
+                       array.push(number)
+
+                 }
+               else{
+                  alert('Please enter a valid number');
+
+               }
+              }
+    return array;
+              }
+
+        
+      let numbers = getArray();
+      document.write(`Entered numbers are ${numbers}`);
+      let largestNumber = largest(numbers);
+      window.alert(`The largest number entered is :${largestNumber}`)
+
+   </script>
+      
+
+
+
+
+
+</body>
+</html>
